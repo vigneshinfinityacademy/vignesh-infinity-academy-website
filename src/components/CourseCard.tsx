@@ -27,7 +27,7 @@ export default function CourseCard({ course, dark = false }: { course: Course; d
           <div className={`course-price-box mt-5 rounded-2xl border px-4 py-3 ${dark ? "border-white/10 bg-white/5" : "border-blue-100 bg-blue-50"}`}>
             <div className="flex items-center justify-between gap-3">
               <span className={`flex items-center gap-2 text-xs font-black tracking-wider uppercase ${dark ? "text-slate-300" : "text-slate-500"}`}>
-                <IndianRupee size={15} /> Offer fee
+                <IndianRupee size={15} /> Regular fee
               </span>
               <span className="text-sm font-extrabold text-slate-400 line-through">{course.regularFeeDisplay}</span>
             </div>
