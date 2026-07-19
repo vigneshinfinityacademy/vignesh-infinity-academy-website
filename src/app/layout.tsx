@@ -12,11 +12,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
   title: {
-    default: "Vignesh Infinity Academy | Tuition & Computer Courses",
+    default:
+      "Vignesh Infinity Academy | Tuition Centre & Computer Courses",
     template: "%s | Vignesh Infinity Academy",
   },
 
-  description: siteConfig.description,
+  description:
+    "Vignesh Infinity Academy provides offline tuition for Classes 1–12 in Muhavur, Rajapalayam, online Maths tuition for 10th, 11th and 12th Tamil Nadu Board students, and practical computer courses.",
 
   applicationName: siteConfig.name,
 
@@ -29,57 +31,58 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.name,
 
+  /*
+   * Google does not use meta-keywords for ranking.
+   * These are retained only as general descriptive metadata.
+   */
   keywords: [
     "Vignesh Infinity Academy",
-    "online 10th maths tuition Tamil Nadu Board",
-    "online 11th maths tuition",
-    "online 12th maths tuition",
-    "online maths classes Tamil Nadu",
-    "Tamil Nadu Board online tuition",
-    "offline tuition Rajapalayam",
-    "offline tuition Muhavur",
-    "Classes 1 to 12 tuition",
-    "computer courses Rajapalayam",
-    "computer courses Muhavur",
+    "tuition centre in Rajapalayam",
+    "tuition centre in Muhavur",
+    "online Maths tuition Tamil Nadu",
+    "10th Maths online tuition",
+    "11th Maths online tuition",
+    "12th Maths online tuition",
+    "Tamil Nadu Board Maths classes",
+    "offline tuition Classes 1 to 12",
+    "computer courses in Rajapalayam",
     "Python programming course",
-    "web design course",
-    "React JS course",
-    "Django course",
-    "Android app development course",
+    "web development course",
     "full stack development course",
   ],
-
-  alternates: {
-    canonical: "/",
-  },
 
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Vignesh Infinity Academy | Tuition & Computer Courses",
-    description: siteConfig.description,
+    title:
+      "Vignesh Infinity Academy | Tuition Centre & Computer Courses",
+    description:
+      "Offline tuition in Rajapalayam, online Maths classes for 10th, 11th and 12th Tamil Nadu Board students, and practical computer courses.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Vignesh Infinity Academy - Tamil Nadu Board tuition and computer courses",
+        alt: "Vignesh Infinity Academy tuition and computer courses",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Vignesh Infinity Academy | Tuition & Computer Courses",
-    description: siteConfig.description,
+    title:
+      "Vignesh Infinity Academy | Tuition Centre & Computer Courses",
+    description:
+      "Offline tuition, online Tamil Nadu Board Maths classes and practical computer courses.",
     images: ["/og-image.png"],
   },
 
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -137,11 +140,15 @@ const structuredData = {
       "@type": "WebSite",
       "@id": `${siteConfig.url}/#website`,
       url: `${siteConfig.url}/`,
-      name: siteConfig.name,
+      name: "Vignesh Infinity Academy",
+
       alternateName: [
         "Vignesh Academy",
+        "VIA",
         "Vignesh Infinity Academy Tamil Nadu",
+        "vigneshinfinityacademy.vercel.app",
       ],
+
       description: siteConfig.description,
       inLanguage: "en-IN",
 
@@ -154,8 +161,8 @@ const structuredData = {
       "@type": "EducationalOrganization",
       "@id": `${siteConfig.url}/#organization`,
 
-      name: siteConfig.name,
-      alternateName: "Vignesh Academy",
+      name: "Vignesh Infinity Academy",
+      alternateName: ["Vignesh Academy", "VIA"],
 
       url: `${siteConfig.url}/`,
 
@@ -173,14 +180,21 @@ const structuredData = {
       telephone: siteConfig.phone,
       email: siteConfig.email,
 
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: siteConfig.serviceArea,
-      },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Rajapalayam",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Tamil Nadu",
+        },
+      ],
 
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Muhavur, Rajapalayam",
+        streetAddress: "Muhavur",
+        addressLocality: "Rajapalayam",
         addressRegion: "Tamil Nadu",
         addressCountry: "IN",
       },
